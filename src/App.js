@@ -7,6 +7,7 @@ function App() {
   const [query, setQuery] = useState('apple');
   
   useEffect(() => {
+    
     console.log('useEffectが走りました。');
     fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${process.env.REACT_APP_CLIENT_ID}`)
       .then(response => response.json())
